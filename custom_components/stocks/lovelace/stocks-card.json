@@ -1,0 +1,7 @@
+{
+    "name": "stocks-card",
+    "content_in_root": false,
+    "filename": "stocks-card.js",
+    "country": ["DE", "AT", "CH", "US", "GB"],
+    "homeassistant": "2023.1.0"
+}

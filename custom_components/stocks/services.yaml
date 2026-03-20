@@ -1,0 +1,36 @@
+# Services for HA Stocks
+
+refresh:
+  name: Refresh stocks
+  description: Manually refresh all stock data from Yahoo Finance.
+
+add_stock:
+  name: Add stock
+  description: Add a new stock to monitor.
+  fields:
+    symbol:
+      name: Symbol
+      description: The stock symbol (e.g., SAP.DE)
+      required: true
+      example: "SAP.DE"
+      selector:
+        text:
+    name:
+      name: Name
+      description: Optional display name for the stock
+      required: false
+      example: "SAP SE"
+      selector:
+        text:
+
+remove_stock:
+  name: Remove stock
+  description: Remove a stock from monitoring.
+  fields:
+    symbol:
+      name: Symbol
+      description: The stock symbol to remove
+      required: true
+      example: "SAP.DE"
+      selector:
+        text:

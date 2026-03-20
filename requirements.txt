@@ -1,0 +1,6 @@
+# Requirements
+
+homeassistant:
+  min_version: "2023.1.0"
+
+# Standard Home Assistant dependencies - no additional requirements needed

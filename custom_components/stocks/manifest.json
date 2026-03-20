@@ -1,0 +1,17 @@
+{
+  "domain": "stocks",
+  "name": "HA Stocks",
+  "version": "2.0.0",
+  "documentation": "https://github.com/steuerlexi/ha-stocks-card",
+  "issue_tracker": "https://github.com/steuerlexi/ha-stocks-card/issues",
+  "dependencies": [],
+  "codeowners": ["@steuerlexi"],
+  "requirements": [],
+  "config_flow": true,
+  "dhcp": [],
+  "homekit": {},
+  "ssdp": [],
+  "zeroconf": [],
+  "iot_class": "cloud_polling",
+  "loggers": ["custom_components.stocks"]
+}

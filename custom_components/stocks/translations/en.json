@@ -1,0 +1,71 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add Stock",
+        "description": "Set up a stock sensor from Yahoo Finance.",
+        "data": {
+          "symbol": "Stock Symbol",
+          "name": "Display Name (optional)",
+          "currency": "Currency"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Yahoo Finance. Please check the symbol and try again.",
+      "invalid_symbol": "Invalid stock symbol. Please check and try again.",
+      "unknown": "Unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This stock is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Stock Options",
+        "description": "Configure update interval and other options.",
+        "data": {
+          "scan_interval": "Update Interval (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "stock": {
+        "name": "Stock"
+      }
+    }
+  },
+  "services": {
+    "refresh": {
+      "name": "Refresh stocks",
+      "description": "Manually refresh all stock data."
+    },
+    "add_stock": {
+      "name": "Add stock",
+      "description": "Add a new stock to monitor.",
+      "fields": {
+        "symbol": {
+          "name": "Symbol",
+          "description": "The stock symbol (e.g., SAP.DE)"
+        },
+        "name": {
+          "name": "Name",
+          "description": "Optional display name for the stock"
+        }
+      }
+    },
+    "remove_stock": {
+      "name": "Remove stock",
+      "description": "Remove a stock from monitoring.",
+      "fields": {
+        "symbol": {
+          "name": "Symbol",
+          "description": "The stock symbol to remove"
+        }
+      }
+    }
+  }
+}

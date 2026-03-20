@@ -1,9 +1,0 @@
-{
-  "name": "HA Stocks Card",
-  "description": "A Lovelace card to display stock prices with sparkline from Yahoo Finance via REST sensors.",
-  "version": "1.0.0",
-  "icon": "mdi:stock",
-  "loader": "module",
-  "requirements": [],
-  "javascript_version": "es6"
-}

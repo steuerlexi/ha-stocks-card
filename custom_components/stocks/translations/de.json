@@ -1,0 +1,71 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Aktie hinzufügen",
+        "description": "Richte einen Aktien-Sensor von Yahoo Finance ein.",
+        "data": {
+          "symbol": "Aktienkürzel",
+          "name": "Anzeigename (optional)",
+          "currency": "Währung"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbindung zu Yahoo Finance fehlgeschlagen. Bitte überprüfe das Kürzel.",
+      "invalid_symbol": "Ungültiges Aktienkürzel. Bitte überprüfe und versuche es erneut.",
+      "unknown": "Ein unerwarteter Fehler ist aufgetreten."
+    },
+    "abort": {
+      "already_configured": "Diese Aktie ist bereits konfiguriert."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Aktien-Optionen",
+        "description": "Konfiguriere Aktualisierungsintervall und weitere Optionen.",
+        "data": {
+          "scan_interval": "Aktualisierungsintervall (Sekunden)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "stock": {
+        "name": "Aktie"
+      }
+    }
+  },
+  "services": {
+    "refresh": {
+      "name": "Aktien aktualisieren",
+      "description": "Aktualisiert alle Aktiendaten manuell."
+    },
+    "add_stock": {
+      "name": "Aktie hinzufügen",
+      "description": "Fügt eine neue Aktie zur Überwachung hinzu.",
+      "fields": {
+        "symbol": {
+          "name": "Kürzel",
+          "description": "Das Aktienkürzel (z.B. SAP.DE)"
+        },
+        "name": {
+          "name": "Name",
+          "description": "Optionaler Anzeigename für die Aktie"
+        }
+      }
+    },
+    "remove_stock": {
+      "name": "Aktie entfernen",
+      "description": "Entfernt eine Aktie aus der Überwachung.",
+      "fields": {
+        "symbol": {
+          "name": "Kürzel",
+          "description": "Das zu entfernende Aktienkürzel"
+        }
+      }
+    }
+  }
+}
