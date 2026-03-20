@@ -4,7 +4,5 @@
   "country": ["DE", "AT", "CH", "US", "GB"],
   "homeassistant": "2023.1.0",
   "render_readme": true,
-  "iot_class": "Cloud Polling",
-  "zip_release": false,
-  "filename": "stocks.zip"
+  "iot_class": "Cloud Polling"
 }
