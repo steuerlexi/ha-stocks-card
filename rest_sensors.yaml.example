@@ -1,0 +1,68 @@
+# Example REST sensors for stocks (to be added to configuration.yaml)
+# Each stock requires one REST sensor that fetches data from Yahoo Finance and sets attributes.
+
+- platform: rest
+  resource: https://query1.finance.yahoo.com/v8/finance/chart/SAP.DE?interval=1d&range=5d
+  scan_interval:
+    minutes: 5
+  sensor:
+    - name: "SAP.DE Chart"
+      value_template: >-
+        {{ value_json.chart.result[0].meta.regularMarketPrice }}
+      attribute_templates:
+        change: >-
+          {{ value_json.chart.result[0].meta.regularMarketChange }}
+        change_percent: >-
+          {{ value_json.chart.result[0].meta.regularMarketChangePercent }}
+        previous_close: >-
+          {{ value_json.chart.result[0].meta.chartPreviousClose }}
+        currency: >-
+          {{ value_json.chart.result[0].meta.currency }}
+        longName: >-
+          {{ value_json.chart.result[0].meta.longName }}
+        historical_data: >-
+          {{ value_json.chart.result[0].indicators.quote[0].close | to_json }}
+
+- platform: rest
+  resource: https://query1.finance.yahoo.com/v8/finance/chart/VOW3.DE?interval=1d&range=5d
+  scan_interval:
+    minutes: 5
+  sensor:
+    - name: "VOW3.DE Chart"
+      value_template: >-
+        {{ value_json.chart.result[0].meta.regularMarketPrice }}
+      attribute_templates:
+        change: >-
+          {{ value_json.chart.result[0].meta.regularMarketChange }}
+        change_percent: >-
+          {{ value_json.chart.result[0].meta.regularMarketChangePercent }}
+        previous_close: >-
+          {{ value_json.chart.result[0].meta.chartPreviousClose }}
+        currency: >-
+          {{ value_json.chart.result[0].meta.currency }}
+        longName: >-
+          {{ value_json.chart.result[0].meta.longName }}
+        historical_data: >-
+          {{ value_json.chart.result[0].indicators.quote[0].close | to_json }}
+
+- platform: rest
+  resource: https://query1.finance.yahoo.com/v8/finance/chart/IWDA.AS?interval=1d&range=5d
+  scan_interval:
+    minutes: 5
+  sensor:
+    - name: "IWDA.AS Chart"
+      value_template: >-
+        {{ value_json.chart.result[0].meta.regularMarketPrice }}
+      attribute_templates:
+        change: >-
+          {{ value_json.chart.result[0].meta.regularMarketChange }}
+        change_percent: >-
+          {{ value_json.chart.result[0].meta.regularMarketChangePercent }}
+        previous_close: >-
+          {{ value_json.chart.result[0].meta.chartPreviousClose }}
+        currency: >-
+          {{ value_json.chart.result[0].meta.currency }}
+        longName: >-
+          {{ value_json.chart.result[0].meta.longName }}
+        historical_data: >-
+          {{ value_json.chart.result[0].indicators.quote[0].close | to_json }}
