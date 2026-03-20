@@ -39,13 +39,13 @@ The sensor will update every 5 minutes (configurable via `scan_interval`).
 6. Restart Home Assistant (not strictly required but recommended).
 
 *Manual install (if you prefer):*
-- Copy the folder `ha-stocks-card` (containing `stock-card.js`) to `<config>/www/community/ha-stocks-card/`.
+- Copy the folder `ha-stocks-card` (containing `ha-stocks-card.js` and `plugin.json`) to `<config>/www/community/ha-stocks-card/`.
 - No need to copy anything else; HACS will handle updates if you later switch to HACS.
 
 ### 3. Register the Resource
 Go to **Settings** → **Dashboards** → **Resources** → **+ Add Resource**:
 - **Type:** `JavaScript`
-- **URL:** `/community/ha-stocks-card/ha-stocks-card/stock-card.js`
+- **URL:** `/community/ha-stocks-card/ha-stocks-card/ha-stocks-card.js`
 - **Enable:** *Leave unchecked* (the card is loaded as a module; keep the checkbox off unless you run HA Core < 2022.10).
 
 ### 4. Add the Card to Lovelace
@@ -90,7 +90,7 @@ The card then displays this data in a clean, responsive layout.
 - If you encounter issues, check the Home Assistant logs for errors related to the REST sensors or the card.
 
 ## Customization
-To modify the appearance, edit the CSS in the `<style>` section of `stock-card.js`.
+To modify the appearance, edit the CSS in the `<style>` section of `ha-stocks-card.js`.
 
 ## Troubleshooting
 - **Entity not found**: Verify the REST sensor was created correctly and the entity ID matches.
